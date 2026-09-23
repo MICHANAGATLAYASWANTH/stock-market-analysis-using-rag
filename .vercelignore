@@ -1,6 +1,11 @@
-# Exclude heavy machine learning model weights & vector index binaries from Vercel web bundle
+# Exclude Python backend files and dependencies from Vercel deployment
+requirements.txt
+src/
+stock_retrieval.py
+*.py
 models/
-data/stock_index.pkl
+data/
+results/
 __pycache__/
 *.pyc
 .DS_Store

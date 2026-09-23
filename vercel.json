@@ -1,6 +1,7 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "framework": null,
   "rewrites": [
     {
       "source": "/dashboard",
