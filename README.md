@@ -1,8 +1,13 @@
-# Stock-Market-RAG
+# Stock-Market-RAG — Smart Stock Market Analysis & Risk Evaluation System
 
 **Team IDs:** SE25MAID035, SE25MAID014, SE25MAID016, SE25MAID021  
 
+🌐 **Live Interactive Dashboard:** [https://michanagatlayaswanth.github.io/stock-market-analysis-using-rag/](https://michanagatlayaswanth.github.io/stock-market-analysis-using-rag/)  
+📊 **Presentation Deck:** [StockRAG Presentation Carousel (PDF)](StockRAG_Presentation_Carousel.pdf)  
+🎬 **Demo Video & Preview:** [stockrag_live_demo.mp4](stockrag_live_demo.mp4) | [stockrag_live_demo.gif](stockrag_live_demo.gif)  
+
 A Financial Retrieval-Augmented Generation (RAG) system that retrieves semantically relevant stocks from structured financial datasets using natural-language investment queries.
+
 
 Example query:
 
