@@ -1,0 +1,6 @@
+# Exclude heavy machine learning model weights & vector index binaries from Vercel web bundle
+models/
+data/stock_index.pkl
+__pycache__/
+*.pyc
+.DS_Store

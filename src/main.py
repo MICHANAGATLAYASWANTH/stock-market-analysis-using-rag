@@ -541,6 +541,30 @@ def main():
         input("\nPress Enter to continue...")
 
 
+# =========================================
+# VERCEL / WSGI / SERVERLESS ENTRYPOINTS
+# =========================================
+def handler(environ=None, start_response=None, *args, **kwargs):
+    """
+    Top-level handler for Vercel Serverless Functions, AWS Lambda, or WSGI.
+    Exports 'app', 'application', and 'handler' to satisfy Vercel Python runtime detection.
+    """
+    if callable(start_response):
+        status = '200 OK'
+        headers = [('Content-Type', 'application/json'), ('Access-Control-Allow-Origin', '*')]
+        start_response(status, headers)
+        return [b'{"status": "healthy", "service": "StockRAG System API", "version": "1.0"}']
+    return {
+        "statusCode": 200,
+        "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
+        "body": '{"status": "healthy", "service": "StockRAG System API", "version": "1.0"}'
+    }
+
+# Top-level exports required by Vercel Python runtime:
+app = handler
+application = handler
+
+
 if __name__ == "__main__":
     try:
         main()
@@ -550,3 +574,4 @@ if __name__ == "__main__":
         print(f"\n\n❌ Fatal error: {str(e)}")
         import traceback
         traceback.print_exc()
+
